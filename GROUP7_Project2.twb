@@ -1,0 +1,2265 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20241.24.0308.0326                               -->
+<workbook original-version='18.1' source-build='2024.1.1 (20241.24.0308.0326)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='2016-2021-imi-results-long-view' inline='true' name='federated.0havowt0my13ry12pl56h0nig0py' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='2016-2021-imi-results-long-view' name='textscan.1iskycs02a2deu15fo5cm13wqe3d'>
+            <connection class='textscan' directory='C:/Users/benja/Downloads' filename='2016-2021-imi-results-long-view.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='poverty-across-california-2023_new' name='textscan.18aqxl60wrt7yb10vd5r61ql46dc'>
+            <connection class='textscan' directory='C:/Users/benja/OneDrive/Documents' filename='poverty-across-california-2023_new.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1iskycs02a2deu15fo5cm13wqe3d' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='datetime' date-parse-format='yyyy' name='YEAR' ordinal='0' />
+            <column datatype='string' name='COUNTY' ordinal='1' />
+            <column datatype='string' name='HOSPITAL' ordinal='2' />
+            <column datatype='integer' name='OSHPDID' ordinal='3' />
+            <column datatype='string' name='Procedure/Condition' ordinal='4' />
+            <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+            <column datatype='real' name='# of Deaths' ordinal='6' />
+            <column datatype='real' name='# of Cases' ordinal='7' />
+            <column datatype='string' name='Hospital Ratings' ordinal='8' />
+            <column datatype='real' name='LONGITUDE' ordinal='9' />
+            <column datatype='real' name='LATITUDE' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1iskycs02a2deu15fo5cm13wqe3d' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='datetime' date-parse-format='yyyy' name='YEAR' ordinal='0' />
+              <column datatype='string' name='COUNTY' ordinal='1' />
+              <column datatype='string' name='HOSPITAL' ordinal='2' />
+              <column datatype='integer' name='OSHPDID' ordinal='3' />
+              <column datatype='string' name='Procedure/Condition' ordinal='4' />
+              <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+              <column datatype='real' name='# of Deaths' ordinal='6' />
+              <column datatype='real' name='# of Cases' ordinal='7' />
+              <column datatype='string' name='Hospital Ratings' ordinal='8' />
+              <column datatype='real' name='LONGITUDE' ordinal='9' />
+              <column datatype='real' name='LATITUDE' ordinal='10' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1iskycs02a2deu15fo5cm13wqe3d' name='csv_hospitalreports1621_odp.csv' table='[csv_hospitalreports1621_odp#csv]' type='table'>
+            <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+              <column datatype='datetime' date-parse-format='yyyy' name='Year' ordinal='0' />
+              <column datatype='string' name='County' ordinal='1' />
+              <column datatype='string' name='hospital' ordinal='2' />
+              <column datatype='integer' name='OSHPDID' ordinal='3' />
+              <column datatype='string' name='system' ordinal='4' />
+              <column datatype='string' name='Type of Report' ordinal='5' />
+              <column datatype='string' name='Performance Measure' ordinal='6' />
+              <column datatype='integer' name='# of Adverse Events' ordinal='7' />
+              <column datatype='integer' name='# of Cases' ordinal='8' />
+              <column datatype='real' name='Risk-adjusted Rate' ordinal='9' />
+              <column datatype='string' name='Hospital Ratings' ordinal='10' />
+              <column datatype='real' name='Longitude' ordinal='11' />
+              <column datatype='real' name='Latitude' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.18aqxl60wrt7yb10vd5r61ql46dc' name='poverty-across-california-2023_new.csv' table='[poverty-across-california-2023_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='County' ordinal='0' />
+              <column datatype='real' name='Poverty Rate' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[# of Adverse Events]' value='[csv_hospitalreports1621_odp.csv].[# of Adverse Events]' />
+          <map key='[# of Cases (csv_hospitalreports1621_odp.csv)]' value='[csv_hospitalreports1621_odp.csv].[# of Cases]' />
+          <map key='[# of Cases]' value='[2016-2021-imi-results-long-view.csv].[# of Cases]' />
+          <map key='[# of Deaths]' value='[2016-2021-imi-results-long-view.csv].[# of Deaths]' />
+          <map key='[COUNTY]' value='[2016-2021-imi-results-long-view.csv].[COUNTY]' />
+          <map key='[County (poverty-across-california-2023_new.csv)]' value='[poverty-across-california-2023_new.csv].[County]' />
+          <map key='[County]' value='[csv_hospitalreports1621_odp.csv].[County]' />
+          <map key='[HOSPITAL]' value='[2016-2021-imi-results-long-view.csv].[HOSPITAL]' />
+          <map key='[Hospital Ratings (csv_hospitalreports1621_odp.csv)]' value='[csv_hospitalreports1621_odp.csv].[Hospital Ratings]' />
+          <map key='[Hospital Ratings]' value='[2016-2021-imi-results-long-view.csv].[Hospital Ratings]' />
+          <map key='[LATITUDE]' value='[2016-2021-imi-results-long-view.csv].[LATITUDE]' />
+          <map key='[LONGITUDE]' value='[2016-2021-imi-results-long-view.csv].[LONGITUDE]' />
+          <map key='[Latitude]' value='[csv_hospitalreports1621_odp.csv].[Latitude]' />
+          <map key='[Longitude]' value='[csv_hospitalreports1621_odp.csv].[Longitude]' />
+          <map key='[OSHPDID (csv_hospitalreports1621_odp.csv)]' value='[csv_hospitalreports1621_odp.csv].[OSHPDID]' />
+          <map key='[OSHPDID]' value='[2016-2021-imi-results-long-view.csv].[OSHPDID]' />
+          <map key='[Performance Measure]' value='[csv_hospitalreports1621_odp.csv].[Performance Measure]' />
+          <map key='[Poverty Rate]' value='[poverty-across-california-2023_new.csv].[Poverty Rate]' />
+          <map key='[Procedure/Condition]' value='[2016-2021-imi-results-long-view.csv].[Procedure/Condition]' />
+          <map key='[Risk Adjuested Mortality Rate]' value='[2016-2021-imi-results-long-view.csv].[Risk Adjuested Mortality Rate]' />
+          <map key='[Risk-adjusted Rate]' value='[csv_hospitalreports1621_odp.csv].[Risk-adjusted Rate]' />
+          <map key='[Type of Report]' value='[csv_hospitalreports1621_odp.csv].[Type of Report]' />
+          <map key='[YEAR]' value='[2016-2021-imi-results-long-view.csv].[YEAR]' />
+          <map key='[Year]' value='[csv_hospitalreports1621_odp.csv].[Year]' />
+          <map key='[hospital]' value='[csv_hospitalreports1621_odp.csv].[hospital]' />
+          <map key='[system]' value='[csv_hospitalreports1621_odp.csv].[system]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[poverty-across-california-2023_new.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[YEAR]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>YEAR</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTY]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>COUNTY</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOSPITAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOSPITAL]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>HOSPITAL</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OSHPDID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OSHPDID]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>OSHPDID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Procedure/Condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Procedure/Condition]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Procedure/Condition</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk Adjuested Mortality Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Risk Adjuested Mortality Rate]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Risk Adjuested Mortality Rate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[# of Deaths]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias># of Deaths</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[# of Cases]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias># of Cases</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Ratings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Ratings]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Hospital Ratings</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONGITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONGITUDE]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>LONGITUDE</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LATITUDE]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>LATITUDE</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hospital</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hospital]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>hospital</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OSHPDID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OSHPDID (csv_hospitalreports1621_odp.csv)]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>OSHPDID</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>system</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[system]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>system</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of Report</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type of Report]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Type of Report</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Performance Measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Performance Measure]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Performance Measure</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Adverse Events</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# of Adverse Events]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias># of Adverse Events</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# of Cases (csv_hospitalreports1621_odp.csv)]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias># of Cases</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk-adjusted Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Risk-adjusted Rate]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Risk-adjusted Rate</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Ratings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Ratings (csv_hospitalreports1621_odp.csv)]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Hospital Ratings</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County (poverty-across-california-2023_new.csv)]</local-name>
+            <parent-name>[poverty-across-california-2023_new.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poverty-across-california-2023_new.csv_690A5F0F642E49DCA5C317A4B8BDB6ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Poverty Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Poverty Rate]</local-name>
+            <parent-name>[poverty-across-california-2023_new.csv]</parent-name>
+            <remote-alias>Poverty Rate</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[poverty-across-california-2023_new.csv_690A5F0F642E49DCA5C317A4B8BDB6ED]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='# of Cases (csv hospitalreports1621 odp.csv)' datatype='integer' name='[# of Cases (csv_hospitalreports1621_odp.csv)]' role='measure' type='quantitative' />
+      <column caption='County' datatype='string' name='[COUNTY]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Average risk adjusted mortality by county' datatype='real' name='[Calculation_1454944165983174656]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [COUNTY] : AVG([Risk-adjusted Rate])}' />
+      </column>
+      <column caption='Average Number of deaths by county' datatype='real' name='[Calculation_1454944165987516418]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [COUNTY] : AVG([# of Deaths])}' />
+      </column>
+      <column caption='County (poverty-across-california-2023 new.csv)' datatype='string' name='[County (poverty-across-california-2023_new.csv)]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='County1' datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Hospital' datatype='string' name='[HOSPITAL]' role='dimension' type='nominal' />
+      <column caption='Hospital Ratings (csv hospitalreports1621 odp.csv)' datatype='string' name='[Hospital Ratings (csv_hospitalreports1621_odp.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Hospital Ratings]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[LATITUDE]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[LONGITUDE]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Latitude1' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude1' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='OSHPDID (csv hospitalreports1621 odp.csv)' datatype='integer' name='[OSHPDID (csv_hospitalreports1621_odp.csv)]' role='measure' type='quantitative' />
+      <column caption='Oshpdid' datatype='integer' name='[OSHPDID]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Procedure/Condition]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='datetime' name='[YEAR]' role='dimension' type='quantitative' />
+      <column caption='Year1' datatype='datetime' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='2016-2021-imi-results-long-view.csv' datatype='table' name='[__tableau_internal_object_id__].[2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='csv_hospitalreports1621_odp.csv' datatype='table' name='[__tableau_internal_object_id__].[csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='poverty-across-california-2023_new.csv' datatype='table' name='[__tableau_internal_object_id__].[poverty-across-california-2023_new.csv_690A5F0F642E49DCA5C317A4B8BDB6ED]' role='measure' type='quantitative' />
+      <column caption='Hospital1' datatype='string' name='[hospital]' role='dimension' type='nominal' />
+      <column caption='System' datatype='string' name='[system]' role='dimension' type='nominal' />
+      <column-instance column='[Hospital Ratings]' derivation='None' name='[none:Hospital Ratings:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Procedure/Condition]' derivation='None' name='[none:Procedure/Condition:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Procedure/Condition:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Carotid Endarterectomy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AAA Repair Endo Unruptured&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Acute Stroke Hemorrhagic&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Hip Fracture&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Espophageal Resection&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Acute Stroke Ischemic&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AAA Repair Open Unruptured&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PCI&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Acute Stroke Subarachnoid&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pancreatic Cancer&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pancreatic Other&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pneumonia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;GI Hemorrhage&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;AMI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AAA Repair Unruptured&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Pancreatic Resection&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Heart Failure&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Acute Stroke&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Hospital Ratings:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Worse&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Better&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;As Expected&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='2016-2021-imi-results-long-view.csv' id='2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21'>
+            <properties context=''>
+              <relation connection='textscan.1iskycs02a2deu15fo5cm13wqe3d' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='datetime' date-parse-format='yyyy' name='YEAR' ordinal='0' />
+                  <column datatype='string' name='COUNTY' ordinal='1' />
+                  <column datatype='string' name='HOSPITAL' ordinal='2' />
+                  <column datatype='integer' name='OSHPDID' ordinal='3' />
+                  <column datatype='string' name='Procedure/Condition' ordinal='4' />
+                  <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+                  <column datatype='real' name='# of Deaths' ordinal='6' />
+                  <column datatype='real' name='# of Cases' ordinal='7' />
+                  <column datatype='string' name='Hospital Ratings' ordinal='8' />
+                  <column datatype='real' name='LONGITUDE' ordinal='9' />
+                  <column datatype='real' name='LATITUDE' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='csv_hospitalreports1621_odp.csv' id='csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767'>
+            <properties context=''>
+              <relation connection='textscan.1iskycs02a2deu15fo5cm13wqe3d' name='csv_hospitalreports1621_odp.csv' table='[csv_hospitalreports1621_odp#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+                  <column datatype='datetime' date-parse-format='yyyy' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='hospital' ordinal='2' />
+                  <column datatype='integer' name='OSHPDID' ordinal='3' />
+                  <column datatype='string' name='system' ordinal='4' />
+                  <column datatype='string' name='Type of Report' ordinal='5' />
+                  <column datatype='string' name='Performance Measure' ordinal='6' />
+                  <column datatype='integer' name='# of Adverse Events' ordinal='7' />
+                  <column datatype='integer' name='# of Cases' ordinal='8' />
+                  <column datatype='real' name='Risk-adjusted Rate' ordinal='9' />
+                  <column datatype='string' name='Hospital Ratings' ordinal='10' />
+                  <column datatype='real' name='Longitude' ordinal='11' />
+                  <column datatype='real' name='Latitude' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='poverty-across-california-2023_new.csv' id='poverty-across-california-2023_new.csv_690A5F0F642E49DCA5C317A4B8BDB6ED'>
+            <properties context=''>
+              <relation connection='textscan.18aqxl60wrt7yb10vd5r61ql46dc' name='poverty-across-california-2023_new.csv' table='[poverty-across-california-2023_new#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='County' ordinal='0' />
+                  <column datatype='real' name='Poverty Rate' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[LATITUDE]' />
+              <expression op='[Latitude]' />
+            </expression>
+            <first-end-point object-id='2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21' />
+            <second-end-point object-id='csv_hospitalreports1621_odp.csv_96CA5FA59F004DD4B1079D7AE2477767' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[COUNTY]' />
+              <expression op='[County (poverty-across-california-2023_new.csv)]' />
+            </expression>
+            <first-end-point object-id='2016-2021-imi-results-long-view.csv_EF5BB2ABD7C842C19D1EBF50FABBEE21' />
+            <second-end-point object-id='poverty-across-california-2023_new.csv_690A5F0F642E49DCA5C317A4B8BDB6ED' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='csv_hospitalreports1621_odp+' inline='true' name='federated.1t7t7lc0dkvgym1h1nlq913aa94c' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='csv_hospitalreports1621_odp' name='textscan.1qru7440nuostm1fhyrni11nqo7h'>
+            <connection class='textscan' directory='C:/Users/benja/Downloads/GROUP7_Project2.twb Files/Data/Downloads' filename='csv_hospitalreports1621_odp.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1qru7440nuostm1fhyrni11nqo7h' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='YEAR' ordinal='0' />
+            <column datatype='string' name='COUNTY' ordinal='1' />
+            <column datatype='string' name='HOSPITAL' ordinal='2' />
+            <column datatype='integer' name='OSHPDID' ordinal='3' />
+            <column datatype='string' name='Procedure/Condition' ordinal='4' />
+            <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+            <column datatype='real' name='# of Deaths' ordinal='6' />
+            <column datatype='string' name='# of Cases' ordinal='7' />
+            <column datatype='string' name='Hospital Ratings' ordinal='8' />
+            <column datatype='real' name='LONGITUDE' ordinal='9' />
+            <column datatype='real' name='LATITUDE' ordinal='10' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.1qru7440nuostm1fhyrni11nqo7h' name='csv_hospitalreports1621_odp.csv' table='[csv_hospitalreports1621_odp#csv]' type='table'>
+            <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='Year' ordinal='0' />
+              <column datatype='string' name='County' ordinal='1' />
+              <column datatype='string' name='hospital' ordinal='2' />
+              <column datatype='integer' name='OSHPDID' ordinal='3' />
+              <column datatype='string' name='system' ordinal='4' />
+              <column datatype='string' name='Type of Report' ordinal='5' />
+              <column datatype='string' name='Performance Measure' ordinal='6' />
+              <column datatype='integer' name='# of Adverse Events' ordinal='7' />
+              <column datatype='integer' name='# of Cases' ordinal='8' />
+              <column datatype='real' name='Risk-adjusted Rate' ordinal='9' />
+              <column datatype='string' name='Hospital Ratings' ordinal='10' />
+              <column datatype='real' name='Longitude' ordinal='11' />
+              <column datatype='real' name='Latitude' ordinal='12' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1qru7440nuostm1fhyrni11nqo7h' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='integer' name='YEAR' ordinal='0' />
+              <column datatype='string' name='COUNTY' ordinal='1' />
+              <column datatype='string' name='HOSPITAL' ordinal='2' />
+              <column datatype='integer' name='OSHPDID' ordinal='3' />
+              <column datatype='string' name='Procedure/Condition' ordinal='4' />
+              <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+              <column datatype='real' name='# of Deaths' ordinal='6' />
+              <column datatype='string' name='# of Cases' ordinal='7' />
+              <column datatype='string' name='Hospital Ratings' ordinal='8' />
+              <column datatype='real' name='LONGITUDE' ordinal='9' />
+              <column datatype='real' name='LATITUDE' ordinal='10' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[# of Adverse Events]' value='[csv_hospitalreports1621_odp.csv].[# of Adverse Events]' />
+          <map key='[# of Cases (2016-2021-imi-results-long-view.csv)]' value='[2016-2021-imi-results-long-view.csv].[# of Cases]' />
+          <map key='[# of Cases]' value='[csv_hospitalreports1621_odp.csv].[# of Cases]' />
+          <map key='[# of Deaths]' value='[2016-2021-imi-results-long-view.csv].[# of Deaths]' />
+          <map key='[COUNTY]' value='[2016-2021-imi-results-long-view.csv].[COUNTY]' />
+          <map key='[County]' value='[csv_hospitalreports1621_odp.csv].[County]' />
+          <map key='[HOSPITAL]' value='[2016-2021-imi-results-long-view.csv].[HOSPITAL]' />
+          <map key='[Hospital Ratings (2016-2021-imi-results-long-view.csv)]' value='[2016-2021-imi-results-long-view.csv].[Hospital Ratings]' />
+          <map key='[Hospital Ratings]' value='[csv_hospitalreports1621_odp.csv].[Hospital Ratings]' />
+          <map key='[LATITUDE]' value='[2016-2021-imi-results-long-view.csv].[LATITUDE]' />
+          <map key='[LONGITUDE]' value='[2016-2021-imi-results-long-view.csv].[LONGITUDE]' />
+          <map key='[Latitude]' value='[csv_hospitalreports1621_odp.csv].[Latitude]' />
+          <map key='[Longitude]' value='[csv_hospitalreports1621_odp.csv].[Longitude]' />
+          <map key='[OSHPDID (2016-2021-imi-results-long-view.csv)]' value='[2016-2021-imi-results-long-view.csv].[OSHPDID]' />
+          <map key='[OSHPDID]' value='[csv_hospitalreports1621_odp.csv].[OSHPDID]' />
+          <map key='[Performance Measure]' value='[csv_hospitalreports1621_odp.csv].[Performance Measure]' />
+          <map key='[Procedure/Condition]' value='[2016-2021-imi-results-long-view.csv].[Procedure/Condition]' />
+          <map key='[Risk Adjuested Mortality Rate]' value='[2016-2021-imi-results-long-view.csv].[Risk Adjuested Mortality Rate]' />
+          <map key='[Risk-adjusted Rate]' value='[csv_hospitalreports1621_odp.csv].[Risk-adjusted Rate]' />
+          <map key='[Type of Report]' value='[csv_hospitalreports1621_odp.csv].[Type of Report]' />
+          <map key='[YEAR]' value='[2016-2021-imi-results-long-view.csv].[YEAR]' />
+          <map key='[Year]' value='[csv_hospitalreports1621_odp.csv].[Year]' />
+          <map key='[hospital]' value='[csv_hospitalreports1621_odp.csv].[hospital]' />
+          <map key='[system]' value='[csv_hospitalreports1621_odp.csv].[system]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;windows-1252&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>County</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[County]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>County</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hospital</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hospital]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>hospital</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OSHPDID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OSHPDID]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>OSHPDID</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>system</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[system]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>system</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Type of Report</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Type of Report]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Type of Report</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Performance Measure</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Performance Measure]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Performance Measure</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Adverse Events</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# of Adverse Events]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias># of Adverse Events</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[# of Cases]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias># of Cases</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk-adjusted Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Risk-adjusted Rate]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Risk-adjusted Rate</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Ratings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Ratings]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Hospital Ratings</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[csv_hospitalreports1621_odp.csv]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YEAR]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>YEAR</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COUNTY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[COUNTY]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>COUNTY</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>HOSPITAL</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[HOSPITAL]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>HOSPITAL</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>OSHPDID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[OSHPDID (2016-2021-imi-results-long-view.csv)]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>OSHPDID</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Procedure/Condition</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Procedure/Condition]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Procedure/Condition</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Risk Adjuested Mortality Rate</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Risk Adjuested Mortality Rate]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Risk Adjuested Mortality Rate</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[# of Deaths]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias># of Deaths</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name># of Cases</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[# of Cases (2016-2021-imi-results-long-view.csv)]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias># of Cases</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hospital Ratings</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Hospital Ratings (2016-2021-imi-results-long-view.csv)]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>Hospital Ratings</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LONGITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LONGITUDE]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>LONGITUDE</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LATITUDE</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[LATITUDE]</local-name>
+            <parent-name>[2016-2021-imi-results-long-view.csv]</parent-name>
+            <remote-alias>LATITUDE</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='County1' datatype='string' name='[COUNTY]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+      <column caption='Hospital1' datatype='string' name='[HOSPITAL]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Hospital Ratings (2016-2021-imi-results-long-view.csv)]' role='dimension' type='nominal' />
+      <column datatype='string' name='[Hospital Ratings]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Latitude1' datatype='real' name='[LATITUDE]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' caption='Longitude1' datatype='real' name='[LONGITUDE]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[Longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Oshpdid' datatype='integer' name='[OSHPDID]' role='measure' type='quantitative' />
+      <column datatype='string' name='[Procedure/Condition]' role='dimension' type='nominal' />
+      <column caption='Year1' datatype='integer' name='[YEAR]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='2016-2021-imi-results-long-view.csv' datatype='table' name='[__tableau_internal_object_id__].[2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='csv_hospitalreports1621_odp.csv' datatype='table' name='[__tableau_internal_object_id__].[csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C]' role='measure' type='quantitative' />
+      <column caption='Hospital' datatype='string' name='[hospital]' role='dimension' type='nominal' />
+      <column caption='System' datatype='string' name='[system]' role='dimension' type='nominal' />
+      <column-instance column='[Hospital Ratings (2016-2021-imi-results-long-view.csv)]' derivation='Attribute' name='[attr:Hospital Ratings (2016-2021-imi-results-long-view.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Hospital Ratings (2016-2021-imi-results-long-view.csv)]' derivation='None' name='[none:Hospital Ratings (2016-2021-imi-results-long-view.csv):nk]' pivot='key' type='nominal' />
+      <column-instance column='[Hospital Ratings]' derivation='None' name='[none:Hospital Ratings:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Procedure/Condition]' derivation='None' name='[none:Procedure/Condition:nk]' pivot='key' type='nominal' />
+      <column-instance column='[system]' derivation='None' name='[none:system:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Hospital Ratings (2016-2021-imi-results-long-view.csv):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;As Expected&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Worse&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Better&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:system:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Alameda Health System&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;University of California&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Kaiser Foundation Hospitals&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Independent/Other&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Hospital Ratings:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Worse&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Better&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;As Expected&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:Hospital Ratings (2016-2021-imi-results-long-view.csv):nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;As Expected&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>%many-values%</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Worse&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;None&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Better&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Procedure/Condition:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Carotid Endarterectomy&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AAA Repair Endo Unruptured&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Acute Stroke Hemorrhagic&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Hip Fracture&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Espophageal Resection&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Acute Stroke Ischemic&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AAA Repair Open Unruptured&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;PCI&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Acute Stroke Subarachnoid&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Pancreatic Cancer&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;Pancreatic Other&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;Pneumonia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;GI Hemorrhage&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;AMI&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AAA Repair Unruptured&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;Pancreatic Resection&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Heart Failure&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Acute Stroke&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='2016-2021-imi-results-long-view.csv' id='2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2'>
+            <properties context=''>
+              <relation connection='textscan.1qru7440nuostm1fhyrni11nqo7h' name='2016-2021-imi-results-long-view.csv' table='[2016-2021-imi-results-long-view#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='YEAR' ordinal='0' />
+                  <column datatype='string' name='COUNTY' ordinal='1' />
+                  <column datatype='string' name='HOSPITAL' ordinal='2' />
+                  <column datatype='integer' name='OSHPDID' ordinal='3' />
+                  <column datatype='string' name='Procedure/Condition' ordinal='4' />
+                  <column datatype='real' name='Risk Adjuested Mortality Rate' ordinal='5' />
+                  <column datatype='real' name='# of Deaths' ordinal='6' />
+                  <column datatype='string' name='# of Cases' ordinal='7' />
+                  <column datatype='string' name='Hospital Ratings' ordinal='8' />
+                  <column datatype='real' name='LONGITUDE' ordinal='9' />
+                  <column datatype='real' name='LATITUDE' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='csv_hospitalreports1621_odp.csv' id='csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C'>
+            <properties context=''>
+              <relation connection='textscan.1qru7440nuostm1fhyrni11nqo7h' name='csv_hospitalreports1621_odp.csv' table='[csv_hospitalreports1621_odp#csv]' type='table'>
+                <columns character-set='windows-1252' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='Year' ordinal='0' />
+                  <column datatype='string' name='County' ordinal='1' />
+                  <column datatype='string' name='hospital' ordinal='2' />
+                  <column datatype='integer' name='OSHPDID' ordinal='3' />
+                  <column datatype='string' name='system' ordinal='4' />
+                  <column datatype='string' name='Type of Report' ordinal='5' />
+                  <column datatype='string' name='Performance Measure' ordinal='6' />
+                  <column datatype='integer' name='# of Adverse Events' ordinal='7' />
+                  <column datatype='integer' name='# of Cases' ordinal='8' />
+                  <column datatype='real' name='Risk-adjusted Rate' ordinal='9' />
+                  <column datatype='string' name='Hospital Ratings' ordinal='10' />
+                  <column datatype='real' name='Longitude' ordinal='11' />
+                  <column datatype='real' name='Latitude' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Latitude]' />
+              <expression op='[LATITUDE]' />
+            </expression>
+            <first-end-point object-id='csv_hospitalreports1621_odp.csv_9BCE02C5B523446A896637CCBBD7B62C' />
+            <second-end-point object-id='2016-2021-imi-results-long-view.csv_E57E7E29CC344B9A86BAD3F292B49AF2' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Adjusted Risk Rate by Procedure and Expectation'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Adjusted Risk Rate by Procedure and Expectation</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2016-2021-imi-results-long-view' name='federated.0havowt0my13ry12pl56h0nig0py' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0havowt0my13ry12pl56h0nig0py'>
+            <column datatype='string' name='[Hospital Ratings]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Procedure/Condition]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Risk Adjuested Mortality Rate]' role='measure' type='quantitative' />
+            <column-instance column='[Risk Adjuested Mortality Rate]' derivation='Avg' name='[avg:Risk Adjuested Mortality Rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Hospital Ratings]' derivation='None' name='[none:Hospital Ratings:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Procedure/Condition]' derivation='None' name='[none:Procedure/Condition:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:Hospital Ratings:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:Hospital Ratings:nk]' member='%null%' />
+                <groupfilter function='member' level='[none:Hospital Ratings:nk]' member='&quot;None&quot;' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0havowt0my13ry12pl56h0nig0py].[none:Procedure/Condition:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Acute Stroke Ischemic&quot;' />
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Carotid Endarterectomy&quot;' />
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Heart Failure&quot;' />
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Pancreatic Cancer&quot;' />
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Pancreatic Resection&quot;' />
+              <groupfilter function='member' level='[none:Procedure/Condition:nk]' member='&quot;Pneumonia&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0havowt0my13ry12pl56h0nig0py].[none:Procedure/Condition:nk]</column>
+            <column>[federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk]' />
+              <text column='[federated.0havowt0my13ry12pl56h0nig0py].[avg:Risk Adjuested Mortality Rate:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0havowt0my13ry12pl56h0nig0py].[avg:Risk Adjuested Mortality Rate:qk]</rows>
+        <cols>([federated.0havowt0my13ry12pl56h0nig0py].[none:Procedure/Condition:nk] / [federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk])</cols>
+      </table>
+      <simple-id uuid='{89F75700-8757-4D9E-A5B9-004380CEA585}' />
+    </worksheet>
+    <worksheet name='Average Risk Adjusted Mortality Rate by Average County Poverty Rate in California'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontname='Tableau Bold' fontsize='12'>Average Risk Adjusted Mortality Rate by Average County Poverty Rate in California</run>
+            <run>Æ&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='2016-2021-imi-results-long-view' name='federated.0havowt0my13ry12pl56h0nig0py' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0havowt0my13ry12pl56h0nig0py'>
+            <column caption='County' datatype='string' name='[COUNTY]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column caption='Average risk adjusted mortality by county' datatype='real' name='[Calculation_1454944165983174656]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='{FIXED [COUNTY] : AVG([Risk-adjusted Rate])}' />
+            </column>
+            <column datatype='real' name='[Poverty Rate]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Risk-adjusted Rate]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_1454944165983174656]' derivation='None' name='[none:Calculation_1454944165983174656:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Poverty Rate]' derivation='None' name='[none:Poverty Rate:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0havowt0my13ry12pl56h0nig0py].[none:Poverty Rate:qk]' field-type='quantitative' max='0.24736375924994108' min='0.039253323400930823' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.0havowt0my13ry12pl56h0nig0py].[none:Calculation_1454944165983174656:qk]' field-type='quantitative' max='20.485818742520024' min='-1.554148428028777' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#dfedeb' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <trendline enable-confidence-bands='false' enable-instant-analytics='true' enabled='true' exclude-color='false' exclude-intercept='false' fit='linear' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='trendline'>
+                <format attr='stroke-color' value='#00000067' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0havowt0my13ry12pl56h0nig0py].[none:Calculation_1454944165983174656:qk]</rows>
+        <cols>[federated.0havowt0my13ry12pl56h0nig0py].[none:Poverty Rate:qk]</cols>
+      </table>
+      <simple-id uuid='{5505B085-8823-4EE7-8FC8-44FA4ED427CA}' />
+    </worksheet>
+    <worksheet name='Average Risk Adjusted Mortality Rate by County'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Risk Adjusted Mortality Rate by County</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='csv_hospitalreports1621_odp+' name='federated.1t7t7lc0dkvgym1h1nlq913aa94c' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1t7t7lc0dkvgym1h1nlq913aa94c'>
+            <column datatype='string' name='[County]' role='dimension' semantic-role='[County].[Name]' type='nominal' />
+            <column datatype='real' name='[Risk Adjuested Mortality Rate]' role='measure' type='quantitative' />
+            <column-instance column='[Risk Adjuested Mortality Rate]' derivation='Avg' name='[avg:Risk Adjuested Mortality Rate:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[County]' derivation='None' name='[none:County:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[Longitude (generated)]' field-type='quantitative' max='-12125536.612643411' min='-14422611.504035287' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[Latitude (generated)]' field-type='quantitative' max='5429011.2328785779' min='3328948.2650902011' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[none:County:nk]' />
+              <color column='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[avg:Risk Adjuested Mortality Rate:qk]' />
+              <geometry column='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[Geometry (generated)]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[Latitude (generated)]</rows>
+        <cols>[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{E3D0C06D-74E8-472C-9502-FECA46789151}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='51'>
+    <window class='worksheet' name='Average Risk Adjusted Mortality Rate by County'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[avg:Risk Adjuested Mortality Rate:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[avg:Risk Adjuested Mortality Rate:qk]</field>
+            <field>[federated.1t7t7lc0dkvgym1h1nlq913aa94c].[none:County:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{FD146B3B-8183-4483-819B-770DDFA20863}' />
+    </window>
+    <window class='worksheet' name='Adjusted Risk Rate by Procedure and Expectation'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:Hospital Ratings:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:Procedure/Condition:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:Risk Adjuested Mortality Rate:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:Type of Report:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:hospital:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:system:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[sum:# of Cases (csv_hospitalreports1621_odp.csv):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BFBD5253-1DF1-42D0-8D77-93D3A6A48D95}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Average Risk Adjusted Mortality Rate by Average County Poverty Rate in California'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:75%-100% Poverty:qk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:County (liheaphhreportffy-2016final_fixed.csv):nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[none:County:nk]</field>
+            <field>[federated.0havowt0my13ry12pl56h0nig0py].[sum:Risk Adjuested Mortality Rate:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F2272C94-C662-4E1E-A58A-C9B903C7EA44}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Adjusted Risk Rate by Procedure and Expectation' width='192'>
+      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
+      kOw8+P8ByZf+w5IiYswAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Average Risk Adjusted Mortality Rate by Average County Poverty Rate in California' width='192'>
+      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
+      QmCC
+    </thumbnail>
+    <thumbnail height='192' name='Average Risk Adjusted Mortality Rate by County' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
